@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.viewapartmentController">
+   <children>
+      <HBox layoutX="4.0" layoutY="14.0" prefHeight="55.0" prefWidth="593.0">
+         <children>
+            <ComboBox fx:id="comboBuild" prefHeight="45.0" prefWidth="150.0" promptText="Select Building">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin></ComboBox>
+            <ComboBox fx:id="comboMonths" prefHeight="45.0" prefWidth="156.0" promptText="Select Month">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin></ComboBox>
+         </children>
+      </HBox>
+      <TableView fx:id="tableView" layoutX="4.0" layoutY="72.0" prefHeight="243.0" prefWidth="601.0">
+        <columns>
+          <TableColumn fx:id="houseno" prefWidth="100.0" text="House Number" />
+          <TableColumn fx:id="water" prefWidth="100.0" text="Water" />
+            <TableColumn fx:id="electricity" prefWidth="100.0" text="Electricity" />
+            <TableColumn fx:id="garbage" prefWidth="100.0" text="Garbage" />
+            <TableColumn fx:id="fee" prefWidth="100.0" text="Fees" />
+            <TableColumn fx:id="month" prefWidth="100.0" text="Month" />
+        </columns>
+      </TableView>
+      <HBox layoutX="5.0" layoutY="364.0" prefHeight="42.0" prefWidth="592.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="70.0" text="Water">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txtwater" prefHeight="30.0" prefWidth="70.0">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Label prefHeight="30.0" prefWidth="70.0" text="Electricity">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txtelec" layoutX="80.0" layoutY="15.0" prefHeight="30.0" prefWidth="70.0">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Label prefHeight="30.0" prefWidth="70.0" text="Garbage">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txtgar" prefHeight="30.0" prefWidth="70.0">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Label layoutX="290.0" layoutY="15.0" prefHeight="30.0" prefWidth="70.0" text="Fees">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="txtfee" layoutX="360.0" layoutY="15.0" prefHeight="30.0" prefWidth="70.0">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <Button fx:id="updatebtn" layoutX="517.0" layoutY="406.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="30.0" prefWidth="70.0" text="Update" />
+      <Label fx:id="labelhouse" layoutX="5.0" layoutY="312.0" prefHeight="30.0" prefWidth="70.0" />
+      <Label fx:id="labelhouse" layoutX="75.0" layoutY="327.0" prefHeight="30.0" prefWidth="70.0" />
+      <Label layoutX="5.0" layoutY="327.0" prefHeight="30.0" prefWidth="70.0" text="House No." />
+   </children>
+</AnchorPane>

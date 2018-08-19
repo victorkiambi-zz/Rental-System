@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="700.0" prefWidth="981.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.primaryController">
+   <left>
+      <VBox prefHeight="547.0" prefWidth="211.0" style="-fx-background-color: #0f203a;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="338.0" prefWidth="211.0">
+               <children>
+                  <Button fx:id="button1" layoutX="1.0" layoutY="14.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleScene1" prefHeight="58.0" prefWidth="211.0" style="-fx-background-color: #0f203a;" text="Apartments" textFill="WHITE" />
+                  <Button fx:id="button2" layoutX="1.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleScene2" prefHeight="58.0" prefWidth="211.0" style="-fx-background-color: #0f203a;" text="Tenants" textFill="#fffefe" />
+                  <Button fx:id="button3" layoutX="1.0" layoutY="130.0" mnemonicParsing="false" onAction="#handleScene3" prefHeight="58.0" prefWidth="211.0" style="-fx-background-color: #0f203a;" text="Payment" textFill="WHITE" />
+                  <Separator layoutY="-1.0" prefHeight="4.0" prefWidth="212.0" />
+                  <Button fx:id="dashbtn" layoutY="280.0" mnemonicParsing="false" onAction="#handleScene4" prefHeight="58.0" prefWidth="211.0" style="-fx-background-color: #0f203a;" text="Dashboard" textFill="WHITE" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #0f203a;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="119.0" prefWidth="221.0" text="Lawsavic Investments" textAlignment="CENTER" textFill="#fffefe" HBox.hgrow="NEVER">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="277.0" prefWidth="789.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="230.0" prefWidth="255.0">
+                     <children>
+                        <ImageView fitHeight="173.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@apartment.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="apartbtn" mnemonicParsing="false" onAction="#handleApart" prefHeight="50.0" prefWidth="153.0" style="-fx-background-color: #003c8f;" text="Apartments" textFill="WHITE">
+                           <font>
+                              <Font name="Lucida Bright Regular" size="14.0" />
+                           </font>
+                           <tooltip>
+                              <Tooltip text="create, view apartments" />
+                           </tooltip></Button>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="230.0" prefWidth="255.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="252.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@user.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="tenbtn" mnemonicParsing="false" onAction="#handleTen" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #c43e00;" text="Tenants" textFill="WHITE">
+                           <font>
+                              <Font name="Lucida Bright Demibold" size="14.0" />
+                           </font>
+                           <tooltip>
+                              <Tooltip text="add,delete tenant" />
+                           </tooltip></Button>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="277.0" prefWidth="268.0">
+                     <children>
+                        <ImageView fitHeight="166.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@payment.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="paybtn" mnemonicParsing="false" onAction="#handlePay" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #ef6c00;" text="Payment" textFill="#f2f2f2">
+                           <font>
+                              <Font name="Lucida Bright Demibold" size="14.0" />
+                           </font>
+                           <tooltip>
+                              <Tooltip text="payment" />
+                           </tooltip></Button>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

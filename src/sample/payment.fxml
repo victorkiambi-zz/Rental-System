@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="786.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.paymentController">
+  <tabs>
+    <Tab text="Payment">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="800.0">
+                     <children>
+                        <HBox layoutX="-2.0" maxWidth="1.7976931348623157E308" prefHeight="51.0" prefWidth="896.0">
+                           <children>
+                              <ComboBox fx:id="comboapart" prefHeight="43.0" prefWidth="128.0" promptText="Select Building">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </ComboBox>
+                              <ComboBox fx:id="combomonths" prefHeight="43.0" prefWidth="120.0" promptText="Select Month">
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="10.0" />
+                                 </HBox.margin></ComboBox>
+                              <Button fx:id="btnsearch1" layoutX="442.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleSearch1" prefHeight="43.0" prefWidth="119.0" text="Search">
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Label fx:id="label" prefHeight="40.0" prefWidth="28.0" text="OR">
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Baskerville Old Face" size="12.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtidstuff" prefHeight="43.0" prefWidth="149.0" promptText="Search By ID">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Button fx:id="btnsearch" mnemonicParsing="false" onAction="#handleSearch" prefHeight="43.0" prefWidth="119.0" text="Search">
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="upbtn" mnemonicParsing="false" onAction="#handleNewupdates" prefHeight="43.0" prefWidth="114.0" text="Update Payments">
+                                 <HBox.margin>
+                                    <Insets left="5.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <VBox layoutX="-2.0" layoutY="67.0" prefHeight="212.0" prefWidth="890.0" AnchorPane.bottomAnchor="321.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="67.0">
+                           <children>
+                              <TableView fx:id="tableView1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="164.0" prefWidth="890.0">
+                                 <columns>
+                                    <TableColumn fx:id="houseno" prefWidth="100.0" text="House No" />
+                                    <TableColumn fx:id="tenantname" prefWidth="100.0" text="Tenant Names" />
+                                    <TableColumn fx:id="idno" prefWidth="75.0" text="Id number" />
+                                    <TableColumn fx:id="month" prefWidth="75.0" text="Month" />
+                                 </columns>
+                              </TableView>
+                              <HBox prefHeight="40.0" prefWidth="890.0">
+                                 <children>
+                                    <Label fx:id="labelid" prefHeight="40.0" prefWidth="122.0">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="labelhouse" layoutX="10.0" layoutY="15.0" prefHeight="40.0" prefWidth="69.0">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="labelmonth" layoutX="137.0" layoutY="15.0" prefHeight="40.0" prefWidth="69.0">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox layoutX="237.0" layoutY="460.0" prefHeight="70.0" prefWidth="800.0" />
+                        <TabPane fx:id="tabPane" layoutX="4.0" layoutY="270.0" prefHeight="200.0" prefWidth="793.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab fx:id="tabrent" text="Rent">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox prefHeight="50.0" prefWidth="793.0">
+                                             <children>
+                                                <Label prefHeight="30.0" prefWidth="95.0" text="Actuals">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtactual" editable="false" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label layoutX="160.0" layoutY="10.0" prefHeight="30.0" prefWidth="95.0" text="Balance b/f">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtbalance" editable="false" layoutX="255.0" layoutY="10.0" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label layoutX="353.0" layoutY="10.0" prefHeight="30.0" prefWidth="70.0" text="Paid">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtpaid" layoutX="389.0" layoutY="10.0" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Button fx:id="balancebtn" mnemonicParsing="false" onAction="#handleBalance" prefHeight="30.0" prefWidth="98.0" text="New Balance">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <TextField fx:id="txtnewbal" editable="false" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutY="50.0" prefHeight="53.0" prefWidth="843.0">
+                                             <children>
+                                                <Label prefHeight="30.0" prefWidth="99.0" text="For the month of">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <ComboBox fx:id="comboMonth" prefHeight="37.0" prefWidth="99.0" promptText="Month">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </ComboBox>
+                                                <Label prefHeight="43.0" prefWidth="95.0" text="Date Paid">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <DatePicker fx:id="datePicker" prefHeight="37.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </DatePicker>
+                                                <Label prefHeight="30.0" prefWidth="70.0" text="Paid by">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtpaidby" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Button fx:id="savebtn" mnemonicParsing="false" onAction="#handlePay" prefHeight="38.0" prefWidth="73.0" text="Save">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Label prefHeight="38.0" prefWidth="76.0" text="Deposit">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <VBox prefHeight="200.0" prefWidth="100.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                   <children>
+                                                      <RadioButton fx:id="checkdepo" mnemonicParsing="false" text="Yes" />
+                                                      <RadioButton fx:id="checkdepo1" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="No">
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </RadioButton>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutY="100.0" prefHeight="59.0" prefWidth="777.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab fx:id="tabdepo" disable="true" text="Deposit">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox prefHeight="50.0" prefWidth="793.0">
+                                             <children>
+                                                <Label prefHeight="30.0" prefWidth="95.0" text="Actuals">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtactual1" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label layoutX="160.0" layoutY="10.0" prefHeight="30.0" prefWidth="95.0" text="Balance b/f">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtbalance1" layoutX="255.0" layoutY="10.0" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label layoutX="353.0" layoutY="10.0" prefHeight="30.0" prefWidth="70.0" text="Paid">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtpaid1" layoutX="389.0" layoutY="10.0" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Button fx:id="balancebtn1" mnemonicParsing="false" onAction="#handleBalance1" prefHeight="30.0" prefWidth="98.0" text="New Balance">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <TextField fx:id="txtnewbal1" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="savebtn1" layoutX="679.0" layoutY="50.0" mnemonicParsing="false" onAction="#handlePay1" prefHeight="38.0" prefWidth="73.0" text="Save" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab fx:id="tabwater" text="Water">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox prefHeight="50.0" prefWidth="793.0">
+                                             <children>
+                                                <Label prefHeight="30.0" prefWidth="95.0" text="Actuals">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtactual2" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label layoutX="160.0" layoutY="10.0" prefHeight="30.0" prefWidth="95.0" text="Balance b/f">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtbalance2" layoutX="255.0" layoutY="10.0" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label layoutX="353.0" layoutY="10.0" prefHeight="30.0" prefWidth="70.0" text="Paid">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtpaid2" layoutX="389.0" layoutY="10.0" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Button fx:id="balancebtn2" mnemonicParsing="false" onAction="#handleBalance2" prefHeight="30.0" prefWidth="98.0" text="New Balance">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <TextField fx:id="txtnewbal2" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="savebtn2" layoutX="674.0" layoutY="50.0" mnemonicParsing="false" onAction="#handlePay2" prefHeight="38.0" prefWidth="73.0" text="Save" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="tabelectric" text="Electricity">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox prefHeight="50.0" prefWidth="793.0">
+                                             <children>
+                                                <Label prefHeight="30.0" prefWidth="95.0" text="Actuals">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtactual3" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label layoutX="160.0" layoutY="10.0" prefHeight="30.0" prefWidth="95.0" text="Balance b/f">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtbalance3" layoutX="255.0" layoutY="10.0" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label layoutX="353.0" layoutY="10.0" prefHeight="30.0" prefWidth="70.0" text="Paid">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtpaid3" layoutX="389.0" layoutY="10.0" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Button fx:id="balancebtn3" mnemonicParsing="false" onAction="#handleBalance3" prefHeight="30.0" prefWidth="98.0" text="New Balance">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <TextField fx:id="txtnewbal3" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="savebtn3" layoutX="674.0" layoutY="50.0" mnemonicParsing="false" onAction="#handlePay3" prefHeight="38.0" prefWidth="73.0" text="Save" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="tabgarbage" text="Garbage">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox prefHeight="50.0" prefWidth="793.0">
+                                             <children>
+                                                <Label prefHeight="30.0" prefWidth="95.0" text="Actuals">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtactual4" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label layoutX="160.0" layoutY="10.0" prefHeight="30.0" prefWidth="95.0" text="Balance b/f">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtbalance4" layoutX="255.0" layoutY="10.0" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label layoutX="353.0" layoutY="10.0" prefHeight="30.0" prefWidth="70.0" text="Paid">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtpaid4" layoutX="389.0" layoutY="10.0" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Button fx:id="balancebtn4" mnemonicParsing="false" onAction="#handleBalance4" prefHeight="30.0" prefWidth="98.0" text="New Balance">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <TextField fx:id="txtnewbal4" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="savebtn4" layoutX="674.0" layoutY="50.0" mnemonicParsing="false" onAction="#handlePay4" prefHeight="38.0" prefWidth="73.0" text="Save" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="tabfees" text="Fees">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <HBox prefHeight="50.0" prefWidth="793.0">
+                                             <children>
+                                                <Label prefHeight="30.0" prefWidth="95.0" text="Actuals">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtactual5" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label layoutX="160.0" layoutY="10.0" prefHeight="30.0" prefWidth="95.0" text="Balance b/f">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtbalance5" layoutX="255.0" layoutY="10.0" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label layoutX="353.0" layoutY="10.0" prefHeight="30.0" prefWidth="70.0" text="Paid">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="txtpaid5" layoutX="389.0" layoutY="10.0" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Button fx:id="balancebtn5" mnemonicParsing="false" onAction="#handleBalance5" prefHeight="30.0" prefWidth="98.0" text="New Balance">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <TextField fx:id="txtnewbal5" prefHeight="30.0" prefWidth="98.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                          <Button fx:id="savebtn5" layoutX="597.0" layoutY="50.0" mnemonicParsing="false" onAction="#handlePay5" prefHeight="38.0" prefWidth="73.0" text="Save" />
+                                       </children></AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="tabview" text="View">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox fx:id="vBox3" prefHeight="172.0" prefWidth="771.0">
+                                             <children>
+                                                <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="614.0">
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                   <children>
+                                                      <Label prefHeight="34.0" prefWidth="93.0" text="Invoice No.">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label fx:id="labelinvoice" layoutX="20.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" />
+                                                      <Label layoutX="113.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" text="Tenant Name">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label fx:id="labelname" layoutX="211.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" />
+                                                      <Label fx:id="labelname1" layoutX="304.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" text="Building" />
+                                                      <Label fx:id="labelbuild" layoutX="397.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="44.0" prefWidth="649.0">
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                   <children>
+                                                      <Label prefHeight="34.0" prefWidth="93.0" text="House No." />
+                                                      <Label fx:id="labelhouse2" layoutX="20.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" />
+                                                      <Label fx:id="labelhouse1" layoutX="113.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" text="Rent">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label fx:id="labelrent" layoutX="211.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" />
+                                                      <Label fx:id="labelrent1" layoutX="304.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" text="Deposit" />
+                                                      <Label fx:id="labeldepo" layoutX="397.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox layoutX="10.0" layoutY="46.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="44.0" prefWidth="649.0">
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                   <children>
+                                                      <Label prefHeight="34.0" prefWidth="93.0" text="Water" />
+                                                      <Label fx:id="labelwater" layoutX="20.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" />
+                                                      <Label fx:id="labelhouse11" layoutX="113.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" text="Electricity">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label fx:id="labelelectric" layoutX="211.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" />
+                                                      <Label fx:id="labelrent11" layoutX="304.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" text="garbage" />
+                                                      <Label fx:id="labelgarbage" layoutX="397.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" />
+                                                   </children>
+                                                </HBox>
+                                                <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="44.0" prefWidth="649.0">
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                   <children>
+                                                      <Label prefHeight="34.0" prefWidth="93.0" text="Fees" />
+                                                      <Label fx:id="labelfees" layoutX="20.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" />
+                                                      <Label fx:id="labelhouse111" layoutX="113.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" text="For the month of">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Label fx:id="labelmonth1" layoutX="211.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" />
+                                                      <Label fx:id="labelrent111" layoutX="304.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" text="Balance" />
+                                                      <Label fx:id="labelbalance" layoutX="397.0" layoutY="10.0" prefHeight="34.0" prefWidth="93.0" />
+                                                      <Button fx:id="printbtn" mnemonicParsing="false" onAction="#handlePrint" prefHeight="34.0" prefWidth="72.0" text="Print">
+                                                         <HBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children></VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="tabrentupdate" text="Updates">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="View">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="462.0" prefWidth="752.0">
+               <children>
+                  <TableView fx:id="tableView" layoutX="2.0" layoutY="70.0" prefHeight="227.0" prefWidth="751.0">
+                    <columns>
+                      <TableColumn fx:id="housecol" prefWidth="92.0" text="House Number" />
+                      <TableColumn fx:id="namecol" prefWidth="86.0" text="Tenant name" />
+                        <TableColumn fx:id="idcol" prefWidth="72.0" text="Id Number" />
+                        <TableColumn fx:id="rentcol" prefWidth="58.0" text="Rent" />
+                        <TableColumn fx:id="depocol" prefWidth="67.0" text="Deposit" />
+                        <TableColumn fx:id="watercol" prefWidth="75.0" text="Water" />
+                        <TableColumn fx:id="electriccol" prefWidth="75.0" text="Electricity" />
+                        <TableColumn fx:id="garbagecol" prefWidth="75.0" text="Garbage" />
+                        <TableColumn fx:id="feecol" prefWidth="75.0" text="Fee" />
+                        <TableColumn fx:id="balancecol" prefWidth="75.0" text="Balance" />
+                    </columns>
+                  </TableView>
+                  <HBox layoutX="-4.0" prefHeight="70.0" prefWidth="795.0">
+                     <children>
+                        <ComboBox fx:id="comboapart1" prefHeight="40.0" prefWidth="130.0" promptText="Select Building">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="combomonths1" layoutX="10.0" layoutY="10.0" prefHeight="40.0" prefWidth="130.0" promptText="Select Month">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Button fx:id="searchstuffbtn" mnemonicParsing="false" onAction="#handleSearchPay" prefHeight="40.0" prefWidth="80.0" text="Search">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="printbtn1" mnemonicParsing="false" onAction="#handlePrinting" prefHeight="40.0" prefWidth="80.0" text="Print">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Button fx:id="totalbtn" layoutX="14.0" layoutY="389.0" mnemonicParsing="false" onAction="#handleTotal" prefHeight="35.0" prefWidth="85.0" text="Total " visible="false" />
+                  <HBox layoutX="2.0" layoutY="297.0" prefHeight="46.0" prefWidth="751.0">
+                     <children>
+                        <Label prefHeight="35.0" prefWidth="70.0" text="Total Rent" />
+                        <TextField fx:id="totalrent" editable="false" prefHeight="31.0" prefWidth="95.0" />
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="70.0" text="Deposit" />
+                        <TextField fx:id="deposit" editable="false" layoutX="80.0" layoutY="10.0" prefHeight="31.0" prefWidth="95.0" />
+                        <Label layoutX="175.0" layoutY="10.0" prefHeight="35.0" prefWidth="70.0" text="Water" />
+                        <TextField fx:id="watertxt" editable="false" layoutX="245.0" layoutY="10.0" prefHeight="31.0" prefWidth="95.0" />
+                        <Label layoutX="340.0" layoutY="10.0" prefHeight="35.0" prefWidth="70.0" text="Electricity" />
+                        <TextField fx:id="electricity" editable="false" layoutX="410.0" layoutY="10.0" prefHeight="31.0" prefWidth="95.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="2.0" layoutY="343.0" prefHeight="46.0" prefWidth="751.0">
+                     <children>
+                        <Label prefHeight="35.0" prefWidth="70.0" text="Garbage" />
+                        <TextField fx:id="garbagetxt" editable="false" prefHeight="31.0" prefWidth="95.0" />
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="70.0" text="Fees" />
+                        <TextField fx:id="feestxt" editable="false" layoutX="80.0" layoutY="10.0" prefHeight="31.0" prefWidth="95.0" />
+                        <Label layoutX="175.0" layoutY="10.0" prefHeight="35.0" prefWidth="70.0" text="Balance" />
+                        <TextField fx:id="balance" editable="false" layoutX="245.0" layoutY="10.0" prefHeight="31.0" prefWidth="95.0" />
+                        <Label layoutX="340.0" layoutY="10.0" prefHeight="35.0" prefWidth="70.0" text="Commission" />
+                        <TextField fx:id="txtcomm" editable="false" prefHeight="31.0" prefWidth="102.0" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="savestuff" layoutX="107.0" layoutY="390.0" mnemonicParsing="false" onAction="#handleSavetotal" prefHeight="34.0" prefWidth="79.0" text="Save" visible="false" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Tenant Payment">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="465.0" prefWidth="873.0">
+               <children>
+                  <HBox prefHeight="50.0" prefWidth="800.0">
+                     <children>
+                        <TextField fx:id="idget" prefHeight="35.0" prefWidth="140.0">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <ComboBox fx:id="compay" prefHeight="35.0" prefWidth="110.0" promptText="Payment">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <ComboBox fx:id="comMonth" layoutX="151.0" layoutY="10.0" prefHeight="35.0" prefWidth="110.0" promptText="Month">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                        <Button fx:id="ansearch" mnemonicParsing="false" onAction="#handleSearchpayment" prefHeight="35.0" prefWidth="100.0" text="Search">
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tableView2" layoutX="14.0" layoutY="50.0" prefHeight="147.0" prefWidth="695.0">
+                     <columns>
+                        <TableColumn fx:id="hcol" prefWidth="75.0" text="House No." />
+                        <TableColumn fx:id="ncol" prefWidth="75.0" text="Names" />
+                        <TableColumn fx:id="pcol" prefWidth="75.0" text="Paid" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="463.0" prefWidth="908.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.apartmentController">
+   <children>
+      <HBox layoutX="-2.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="67.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <TextField fx:id="textfieldapart" prefHeight="35.0" prefWidth="160.0">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="loadbtn" mnemonicParsing="false" onAction="#handleloaddata" prefHeight="35.0" prefWidth="100.0" text="Load">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="apartmentAdd" mnemonicParsing="false" onAction="#handleaddApartment" prefHeight="35.0" prefWidth="100.0" text="add apartment">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="deletebtn" layoutX="310.0" layoutY="20.0" mnemonicParsing="false" onAction="#handledeleteApartment" prefHeight="35.0" prefWidth="110.0" text="delete apartment">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <VBox layoutX="-2.0" layoutY="67.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="67.0">
+         <children>
+            <TableView fx:id="tableView1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="338.0" prefWidth="644.0">
+              <columns>
+                <TableColumn fx:id="houseno" prefWidth="100.0" text="House Number">
+
+                </TableColumn>
+                 <TableColumn fx:id="tenantname" prefWidth="100.0" text="Tenant Names">
+
+                 </TableColumn>
+                 <TableColumn fx:id="idno" prefWidth="75.0" text="ID number">
+
+                 </TableColumn>
+                 <TableColumn fx:id="rentpaid" prefWidth="75.0" text="Rent Paid">
+
+                 </TableColumn> <TableColumn fx:id="rentpayable" prefWidth="100.0" text="Rent Payable">
+
+              </TableColumn> <TableColumn fx:id="water" prefWidth="75.0" text="Water">
+
+              </TableColumn> <TableColumn fx:id="garbage" prefWidth="75.0" text="Garbage">
+
+              </TableColumn> <TableColumn fx:id="electricity" prefWidth="75.0" text="Electricity">
+
+              </TableColumn>
+                  <TableColumn fx:id="balance" prefWidth="75.0" text="Balance" />
+
+
+
+              </columns>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

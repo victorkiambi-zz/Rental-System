@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JavaFXApplication2.jnlp">
+  <information>
+    <title>JavaFXApplication2</title>
+    <vendor>hp</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="JavaFXApplication2.jar" size="305358" download="eager" />
+    <jar href="lib\controlsfx-9.0.0.jar" size="946412" download="eager" />
+    <jar href="lib\jasperreports-6.6.0.jar" size="5534555" download="eager" />
+    <jar href="lib\jasperreports-fonts-6.6.0.jar" size="2478073" download="eager" />
+    <jar href="lib\jasperreports-javaflow-6.6.0.jar" size="5543559" download="eager" />
+    <jar href="lib\jfoenix-9.0.4.jar" size="2201031" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.46.jar" size="1004838" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="JavaFXApplication2" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="sample.Main"  name="JavaFXApplication2" />
+  <update check="always"/>
+</jnlp>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane fx:id="tabPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="683.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.tenantController">
+  <tabs>
+    <Tab fx:id="tab1" text="Add Tenant">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="512.0" prefWidth="709.0">
+               <children>
+                  <AnchorPane prefHeight="479.0" prefWidth="652.0">
+                     <children>
+                        <Label layoutX="39.0" layoutY="58.0" prefHeight="30.0" prefWidth="100.0" text="Tenant name" />
+                        <Label layoutX="39.0" layoutY="109.0" prefHeight="30.0" prefWidth="100.0" text="ID number" />
+                        <Label layoutX="39.0" layoutY="160.0" prefHeight="26.0" prefWidth="100.0" text="Apartment" />
+                        <Label layoutX="39.0" layoutY="202.0" prefHeight="30.0" prefWidth="100.0" text="House no." />
+                        <TextField fx:id="txtname" layoutX="207.0" layoutY="58.0" prefHeight="30.0" prefWidth="100.0" />
+                        <TextField fx:id="txtid" layoutX="207.0" layoutY="109.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Button fx:id="savebtn" layoutX="523.0" layoutY="438.0" mnemonicParsing="false" onAction="#handletenant" prefHeight="30.0" prefWidth="100.0" text="Save" />
+                        <TextField fx:id="txtchild" layoutX="520.0" layoutY="109.0" prefHeight="30.0" prefWidth="100.0" />
+                        <TextField fx:id="txtvehicle" layoutX="520.0" layoutY="158.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="355.0" layoutY="58.0" prefHeight="30.0" prefWidth="100.0" text="Status" />
+                        <Label layoutX="355.0" layoutY="109.0" prefHeight="30.0" prefWidth="142.0" text="No of people living with" />
+                        <Label layoutX="355.0" layoutY="156.0" prefHeight="30.0" prefWidth="100.0" text="Car registratio no" />
+                        <ComboBox fx:id="comboBox" layoutX="520.0" layoutY="61.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="355.0" layoutY="202.0" prefHeight="30.0" prefWidth="100.0" text="Phone Contact" />
+                        <TextField fx:id="txtcontact" layoutX="520.0" layoutY="202.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="39.0" layoutY="282.0" prefHeight="30.0" prefWidth="100.0" text="Employed?" />
+                        <Label layoutX="39.0" layoutY="322.0" prefHeight="30.0" prefWidth="100.0" text="Employer name" />
+                        <TextField fx:id="txtempname" layoutX="207.0" layoutY="322.0" onAction="#handleShow" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="39.0" layoutY="361.0" prefHeight="30.0" prefWidth="100.0" text="Contact" />
+                        <TextField fx:id="txtempcontact" layoutX="207.0" layoutY="361.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="39.0" layoutY="405.0" prefHeight="30.0" prefWidth="100.0" text="address" />
+                        <TextField fx:id="txtempbox" layoutX="207.0" layoutY="405.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="322.0" layoutY="285.0" prefHeight="30.0" prefWidth="200.0" text="Contact person in case of emergency" />
+                        <TextField fx:id="txtemergname" layoutX="523.0" layoutY="285.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="355.0" layoutY="325.0" prefHeight="30.0" prefWidth="100.0" text="Id no." />
+                        <TextField fx:id="txtemergid" layoutX="523.0" layoutY="325.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="355.0" layoutY="364.0" prefHeight="30.0" prefWidth="100.0" text="P.o Box" />
+                        <TextField fx:id="txtemergbox" layoutX="523.0" layoutY="364.0" prefHeight="30.0" prefWidth="100.0" />
+                        <ComboBox fx:id="combowork" layoutX="207.0" layoutY="280.0" onAction="#handleShow" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="355.0" layoutY="405.0" prefHeight="30.0" prefWidth="100.0" text="Contact" />
+                        <TextField fx:id="txtemergcontact" layoutX="523.0" layoutY="405.0" prefHeight="30.0" prefWidth="100.0" />
+                        <ComboBox fx:id="comboapart" layoutX="209.0" layoutY="161.0" onAction="#handleHouses" prefHeight="30.0" prefWidth="100.0" />
+                        <ComboBox fx:id="combohouse" layoutX="209.0" layoutY="202.0" prefHeight="30.0" prefWidth="100.0" />
+                        <ComboBox fx:id="combomonth" layoutX="521.0" layoutY="240.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="355.0" layoutY="240.0" prefHeight="30.0" prefWidth="100.0" text="Month" />
+                        <Label fx:id="labeltype" layoutX="209.0" layoutY="240.0" prefHeight="33.0" prefWidth="99.0" />
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="tab2" text="Search Tenant">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="709.0">
+               <children>
+                  <AnchorPane layoutX="14.0" layoutY="166.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="439.0" prefWidth="688.0" visible="false">
+                     <children>
+                        <Label layoutX="32.0" layoutY="14.0" prefHeight="30.0" prefWidth="100.0" text="Tenant name" />
+                        <Label layoutX="32.0" layoutY="65.0" prefHeight="30.0" prefWidth="100.0" text="ID number" />
+                        <Label layoutX="32.0" layoutY="116.0" prefHeight="26.0" prefWidth="100.0" text="Apartment" />
+                        <Label layoutX="32.0" layoutY="158.0" prefHeight="30.0" prefWidth="100.0" text="House no." />
+                        <TextField fx:id="txtname1" layoutX="200.0" layoutY="14.0" prefHeight="30.0" prefWidth="100.0" />
+                        <TextField fx:id="txtid1" layoutX="200.0" layoutY="65.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Button fx:id="deletebtn" layoutX="516.0" layoutY="357.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="30.0" prefWidth="100.0" text="Delete" />
+                        <TextField fx:id="txtpeople" layoutX="513.0" layoutY="65.0" prefHeight="30.0" prefWidth="100.0" />
+                        <TextField fx:id="txtvehicle1" layoutX="513.0" layoutY="114.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="348.0" layoutY="14.0" prefHeight="30.0" prefWidth="100.0" text="Status" />
+                        <Label layoutX="348.0" layoutY="65.0" prefHeight="30.0" prefWidth="142.0" text="No of people living with" />
+                        <Label layoutX="348.0" layoutY="112.0" prefHeight="30.0" prefWidth="100.0" text="Car registratio no" />
+                        <Label layoutX="348.0" layoutY="158.0" prefHeight="30.0" prefWidth="100.0" text="Contact" />
+                        <TextField fx:id="txtcontact1" layoutX="513.0" layoutY="158.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="32.0" layoutY="201.0" prefHeight="30.0" prefWidth="100.0" text="Employed?" />
+                        <Label layoutX="32.0" layoutY="241.0" prefHeight="30.0" prefWidth="100.0" text="Employer name" />
+                        <TextField fx:id="txtempname1" layoutX="200.0" layoutY="241.0" onAction="#handleShow" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="32.0" layoutY="280.0" prefHeight="30.0" prefWidth="100.0" text="Contact" />
+                        <TextField fx:id="txtempcontact1" layoutX="200.0" layoutY="280.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="32.0" layoutY="324.0" prefHeight="30.0" prefWidth="100.0" text="address" />
+                        <TextField fx:id="txtempbox1" layoutX="200.0" layoutY="324.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="315.0" layoutY="204.0" prefHeight="30.0" prefWidth="200.0" text="Contact person in case of emergency" />
+                        <TextField fx:id="txtemergname1" layoutX="516.0" layoutY="204.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="348.0" layoutY="244.0" prefHeight="30.0" prefWidth="100.0" text="Id no." />
+                        <TextField fx:id="txtemergid1" layoutX="516.0" layoutY="244.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="348.0" layoutY="283.0" prefHeight="30.0" prefWidth="100.0" text="P.o Box" />
+                        <TextField fx:id="txtemergbox1" layoutX="516.0" layoutY="283.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Label layoutX="348.0" layoutY="324.0" prefHeight="30.0" prefWidth="100.0" text="Contact" />
+                        <TextField fx:id="txtemergcontact1" layoutX="516.0" layoutY="324.0" prefHeight="30.0" prefWidth="100.0" />
+                        <Button fx:id="updatebtn" layoutX="415.0" layoutY="357.0" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="30.0" prefWidth="100.0" text="Update" />
+                        <TextField fx:id="txtapartment" layoutX="200.0" layoutY="112.0" prefHeight="30.0" prefWidth="100.0" />
+                        <TextField fx:id="txthouse" layoutX="200.0" layoutY="158.0" prefHeight="30.0" prefWidth="100.0" />
+                        <TextField fx:id="txtwork" layoutX="200.0" layoutY="201.0" prefHeight="30.0" prefWidth="100.0" />
+                        <TextField fx:id="txtstatus1" layoutX="513.0" layoutY="14.0" prefHeight="30.0" prefWidth="100.0" />
+                     </children>
+                  </AnchorPane>
+                  <ComboBox fx:id="comboapart2" layoutX="14.0" layoutY="7.0" prefHeight="43.0" prefWidth="127.0" promptText="Select Building" />
+                  <ComboBox fx:id="combomonth2" layoutX="149.0" layoutY="6.0" prefHeight="43.0" prefWidth="127.0" promptText="Select Month" />
+                  <TableView fx:id="tableView" layoutX="14.0" layoutY="59.0" prefHeight="274.0" prefWidth="667.0">
+                    <columns>
+                      <TableColumn fx:id="houseno" prefWidth="75.0" text="House No." />
+                      <TableColumn fx:id="names" prefWidth="75.0" text="Names" />
+                        <TableColumn fx:id="idno" prefWidth="75.0" text="Id Number" />
+                        <TableColumn fx:id="housetype" prefWidth="75.0" text="House Type" />
+                        <TableColumn fx:id="contact" prefWidth="75.0" text="Contact" />
+                        <TableColumn fx:id="month" prefWidth="75.0" text="Month" />
+                    </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

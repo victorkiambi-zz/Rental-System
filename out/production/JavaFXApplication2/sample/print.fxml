@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="118.0" prefWidth="344.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.printController">
+    <children>
+        <Label layoutX="109.0" layoutY="4.0" prefHeight="37.0" prefWidth="96.0" text="Print Document">
+            <font>
+                <Font name="Calibri" size="12.0" />
+            </font></Label>
+        <Label layoutX="14.0" layoutY="41.0" prefHeight="35.0" prefWidth="95.0" text="Document Name" />
+        <TextField fx:id="txtprint" layoutX="175.0" layoutY="44.0" prefHeight="28.0" prefWidth="146.0" />
+        <Button fx:id="printbtn" layoutX="234.0" layoutY="72.0" mnemonicParsing="false" onAction="#handlePrint" prefHeight="35.0" prefWidth="86.0" text="Print" />
+    </children>
+</AnchorPane>

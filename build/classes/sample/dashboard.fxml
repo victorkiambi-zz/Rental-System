@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="277.0" prefWidth="789.0">
+         <children>
+            <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="230.0" prefWidth="255.0">
+               <children>
+                  <ImageView fx:id="imageView1" fitHeight="173.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@apartment.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btn1" mnemonicParsing="false" prefHeight="50.0" prefWidth="153.0" style="-fx-background-color: #003c8f;" text="Apartments" textFill="WHITE">
+                     <font>
+                        <Font name="Lucida Bright Regular" size="14.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="create, view apartments" />
+                     </tooltip>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="230.0" prefWidth="255.0">
+               <children>
+                  <ImageView fx:id="imageView2" fitHeight="150.0" fitWidth="252.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@user.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btn2" mnemonicParsing="false" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #c43e00;" text="Tenants" textFill="WHITE">
+                     <font>
+                        <Font name="Lucida Bright Demibold" size="14.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="add,delete tenant" />
+                     </tooltip>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </VBox>
+            <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="277.0" prefWidth="268.0">
+               <children>
+                  <ImageView fx:id="imageView3" fitHeight="166.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@payment.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btn3" mnemonicParsing="false" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #ef6c00;" text="Payment" textFill="#f2f2f2">
+                     <font>
+                        <Font name="Lucida Bright Demibold" size="14.0" />
+                     </font>
+                     <tooltip>
+                        <Tooltip text="payment" />
+                     </tooltip>
+                  </Button>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
